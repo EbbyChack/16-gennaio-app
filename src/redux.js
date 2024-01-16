@@ -1,13 +1,19 @@
 import { createStore } from "redux";
+import {SET_JOBS, ADD_TO_FAVORITES } from './actions/actions'
 
 // ACTIONS
 
-export const setJobs = (jobs) => ({ type: "SET_JOBS", payload: jobs });
-export const addToFavorites = (company) => ({ type: "ADD_TO_FAVORITES", payload: company });
+
 
 // REDUCER
 
-const reducer = (state = { jobs: [] }, action) => {
+const initialState = {
+  jobs:[],
+  favorites:[],
+
+}
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "SET_JOBS":
       return {
