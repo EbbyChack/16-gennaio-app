@@ -1,7 +1,7 @@
 import { useEffect, useState  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import { setJobs, addToFavorites } from "../redux";
+import { setJobs, addToFavorites } from "../actions/actions";
 import Job from "./Job";
 
 const MainSearch = () => {
